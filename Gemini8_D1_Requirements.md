@@ -4,27 +4,29 @@
 |------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
 | 🌐 **Remote Monitoring**           | F01     | The Gemini OCS shall provide remote access and monitoring capabilities.                                           |
 |                                    | F02     | While planned downtime, the system’s functions such as monitoring and data retrieval shall remain accessible.      |
-|                                    | F03     | The system shall allow Astronomer users to access real-time data.                                                |
+|                                    | F03     | The system shall support the interactive operation of the Gemini 8m Telescopes exclusively through the Observatory Control System (OCS).  |
 |                                    | F04     | The system shall allow Astronomer users to simulate telescope behavior.                                          |
 |                                    | F05     | The system shall allow multiple users to log into the Gemini OCS with secure and privilege-based access to any telescope. |
 |                                    | F06     | When an active user is controlling the Gemini OCS, the system shall allow other users with appropriate permissions to monitor all relevant data. |
 |                                    | F07     | The Gemini OCS shall allow the tools for science observers to review and adjust observing programs.              |
-| 🤖 **Observation Automation**      | F08     | When sequences are observed, the Gemini OCS shall automate the observation and shall allow interactive options when necessary. |
-|                                    | F09     | When scheduling tasks and observing commands, the Gemini OCS shall use a queue-based approach.                   |
-| 🛰️ **Science Plan Management**    | F10     | The Gemini OCS shall allow astronomers to create, test, and submit science plans, collect data, and validate its quality. |
-|                                    | F11     | When a science plan is submitted, the Gemini OCS shall allow science observers to validate science plans.         |
-|                                    | F12     | When a science plan is validated, the system shall allow science observers to transform it into executable programs, monitor observations, and make adjustments to them. |
-|                                    | F13     | When an observation is completed, the system shall generate a report with key details.                           |
-|                                    | F14     | When data is collected, the system shall generate a quality assessment report.                                    |
-|                                    | F15     | When a report is generated, the system shall allow access based on the user’s role.                              |
-| 💼 **Role-Based Operations**       | F16     | The system shall allow all users at the observing level to perform a certain number of embedded tests.           |
-|                                    | F17     | The system shall allow all users at the maintenance level to update maintenance tables.                          |
-|                                    | F18     | The system shall allow all users at the test level to install and test new packages, perform any low-level tests, and update all non-protected parameter values. |
-| 💡 **Data and Alerts**             | F19     | The Gemini OCS shall provide real-time data on quality assessment, performance, and collected data.             |
-|                                    | F20     | The system shall generate and display a real-time alert to administrators when a system failure occurs.          |
-| 📊 **Report System**               | F21     | When resources or budgets are allocated, the system shall generate the financial reports (usages and costs).     |
-|                                    | F22     | When a report is ready, the system shall provide options for web access, email, or downloads so that users can access or receive the report through their preferred method. |
-|                                    | F23     | When a report is generated, the system shall allow users to download or view the report according to their role and permissions. |
+|                                    | F08      | The system shall support restricting specific operations to designated remote sites.                            |
+| 🤖 **Observation Automation**      | F09     | When sequences are observed, the Gemini OCS shall automate the observation and shall allow interactive options when necessary. |
+|                                    | F10     | When scheduling tasks and observing commands, the Gemini OCS shall use a queue-based approach.                   |
+| 🛰️ **Science Plan Management**    | F11     | The Gemini OCS shall allow astronomers to create, test, and submit science plans, collect data, and validate its quality. |
+|                                    | F12     | When a science plan is submitted, the Gemini OCS shall allow science observers to validate science plans.         |
+|                                    | F13     | When a science plan is validated, the system shall allow science observers to transform it into executable programs, monitor observations, and make adjustments to them. |
+|                                    | F14     | When an observation is completed, the system shall generate a report with key details.                           |
+|                                    | F15     | When data is collected, the system shall generate a quality assessment report.                                    |
+|                                    | F16     | When a report is generated, the system shall allow access based on the user’s role.                              |
+| 💼 **Role-Based Operations**       | F17     | The system shall allow all users at the observing level to perform a certain number of embedded tests.           |
+|                                    | F18     | The system shall allow all users at the maintenance level to update maintenance tables.                          |
+|                                    | F19     | The system shall allow all users at the test level to install and test new packages, perform any low-level tests, and update all non-protected parameter values. |
+| 💡 **Data and Alerts**             | F20     | The Gemini OCS shall provide real-time data on quality assessment, performance, and collected data.             |
+|                                     |F21      | The Gemini OCS shall allow acquisition of astronomical data and on-line assessment of data quality.             |
+|                                    | F22     | The system shall generate and display a real-time alert to administrators when a system failure occurs.          |
+| 📊 **Report System**               | F23     | When resources or budgets are allocated, the system shall generate the financial reports (usages and costs).     |
+|                                    | F24     | When a report is ready, the system shall provide options for web access, email, or downloads so that users can access or receive the report through their preferred method. |
+|                                    | F24     | When a report is generated, the system shall allow users to download or view the report according to their role and permissions. |
 
 --- 
 
