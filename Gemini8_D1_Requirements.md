@@ -1,3 +1,5 @@
+# Requirements Gathering
+---
 
 ### Functional Requirements 
 | Feature                            | Req No. | Requirements                                                                                                      |
@@ -30,23 +32,29 @@
 
 --- 
 
-### Non-Functional Requirements 
+### Non-Functional Requirements
+
 | Feature                            | Req No. | Requirements                                                                                                      |
 |------------------------------------|---------|------------------------------------------------------------------------------------------------------------------|
-| 🌍 **Language Support**            | NF01    | The System shall support multiple languages such as English, Spanish, and Hawaiian.                              |
-| 🎨 **Design and Theme**            | NF02    | The system shall allow users to switch between light and dark themes.                                            |
-|                                    | NF03    | When the dark theme is selected, the system’s chat box shall display with a black background and white text.      |
-|                                    | NF04    | When the dark theme is selected, the system shall use blue, orange, or green accent colors for highlights and actions. |
-|                                    | NF05    | When the neutral theme is selected, the system’s chat box shall display with a light grey background and black text. |
-|                                    | NF06    | When the neutral theme is selected, the system shall use subtle blues or greens as accent colors for focus areas. |
-| 🔒 **Security**                    | NF07    | The system shall log all system activities, including start-ups, shut-down commands, and data transactions, with time stamps to ensure traceability and accountability. |
-|                                    | NF08    | The system shall use multi-user login and configuration processes to ensure that only authorized personnel access specific system functionalities. |
-|                                    | NF09    | The system shall store all data, including raw observation data, in redundant formats (e.g., maintaining at least two copies) to prevent loss. |
-|                                    | NF10    | When sharing a report, the system shall ensure that sensitive data is protected.                                 |
-| 🖥️ **Compatibility**               | NF11    | The system shall be flexible to operate on multiple operating systems (Windows, macOS, Linux) ensuring compatibility across user locations and preferences. |
-|                                    | NF12    | When the user accesses the system on any device (mobile or desktop), the system shall automatically adjust the layout to fit the device’s screen size. |
-|                                    | NF13    | When a report is ready, the system shall provide options for web access, email, or downloads so that users can access or receive the report through their preferred method. |
-| 🔧 **Maintenance**                 | NF14    | When there is low system usage, a maintenance schedule shall occur.                                              |
-|                                    | NF15    | The system shall notify users of system updates, hardware upgrades, and routine maintenance in advance.          |
-| ⚡ **Performance**                  | NF16    | The system shall respond within 100-200 milliseconds for real-time commands to ensure safe and precise operations. |
+| ⏳ **Availability**                 | NF01    | The system shall achieve 99.9% uptime annually.                                                                  |
+| 📈 **Scalability**                 | NF02    | The system shall be designed to handle an increase in users and data over time.                                  |
+| 🌍 **Languages**                   | NF03    | The System shall support multiple languages such as English, Spanish, and Hawaiian.                             |
+| 🎨 **Design**                      | NF04    | The system shall allow users to switch between light and dark themes.                                           |
+|                                    | NF05    | When the dark theme is selected, the system’s chat box shall display with a black background and white text.     |
+|                                    | NF06    | When the dark theme is selected, the system shall use blue, orange, or green accent colors for highlights and actions. |
+|                                    | NF07    | When the neutral theme is selected, the system’s chat box shall display with a light grey background and black text. |
+|                                    | NF08    | When the neutral theme is selected, the system shall use subtle blues or greens as accent colors for focus areas. |
+| 🔒 **Security**                    | NF09    | The system shall log all system activities, including start-ups, shut-down commands, and data transactions, with time stamps to ensure traceability and accountability. |
+|                                    | NF10    | When a user attempts to access the system, the system shall ensure that only authorized personnel access specific system functionalities. |
+|                                    | NF11    | The system shall store all data, including raw observation data, in redundant formats (e.g., maintaining at least two copies) to prevent loss. |
+|                                    | NF12    | When sharing a report, the system shall ensure that sensitive data is protected.                                 |
+| 🖥️ **Compatibility**               | NF13    | The system shall be flexible to operate on multiple operating systems (Windows, macOS, Linux) ensuring compatibility across user locations and preferences. |
+|                                    | NF14    | When the user accesses the system on any device (mobile or desktop), the system shall automatically adjust the layout to fit the device’s screen size. |
+|                                    | NF15    | When a report is ready, the system shall provide options for web access, email, or downloads so that users can access or receive the report. |
+| ⚙️ **Maintenance**                  | NF16    | When there is low system usage, a maintenance schedule shall occur.                                             |
+|                                    | NF17    | The system shall notify users of system updates, hardware upgrades, and routine maintenance in advance.          |
+| 🚀 **Performance**                  | NF18    | The system shall respond within 100-200 milliseconds for real-time commands to ensure safe and precise operations. |
+|                                    | NF19    | The system shall handle up to 100 simultaneous report generation requests without degradation in performance.    |
+|                                    | NF20    | The system shall optimize database queries to minimize delays in retrieving observation data for at most 2 seconds. |
+
 ---
