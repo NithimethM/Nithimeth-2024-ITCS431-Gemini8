@@ -31,7 +31,7 @@ The Gemini OCS system use case diagram defines different roles and their access 
      - Simulate telescope behavior (**[F13]**)
      - Data acquisition (**[F24]**)
      - Access real-time data (**[F26]**)
-     - Receive real-time failure alerts and Access to error categorization and error logs (**[F14,F15]**)
+     - Receive real-time failure alerts, including Access to error categorization and error logs (**[F14,F15]**)
      - Request historical reports on the telescope’s status (**[F17]**)
      - Request financial report generation (**[F19]**)
      - Monitor all relevant data (**[F25]**)
