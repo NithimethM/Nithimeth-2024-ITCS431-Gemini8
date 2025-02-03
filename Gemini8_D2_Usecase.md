@@ -40,3 +40,6 @@ The Gemini OCS system use case diagram defines different roles and their access 
      - Request historical reports on the telescope’s status (**[F17]**)
      - Request for financial report (**[F19]**)
      - Update maintenance tables (**[F22]**)
+### 4. **Science Observer**  
+     - Perform an embedded test
+   
