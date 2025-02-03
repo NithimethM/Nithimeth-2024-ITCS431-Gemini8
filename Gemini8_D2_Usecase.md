@@ -31,8 +31,7 @@ The Gemini OCS system use case diagram defines different roles and their access 
      - Simulate telescope behavior (**[F13]**)
      - Data acquisition, including access real-time data (**[F24,26]**)
      - Request historical reports on the telescope’s status (**[F17]**)
-  
-    
+     
 ### 3. **Administrator**
    - Responsible for **system access management, security, and data integrity**.
    - Has access to:
@@ -40,8 +39,29 @@ The Gemini OCS system use case diagram defines different roles and their access 
      - Request historical reports on the telescope’s status (**[F17]**)
      - Request for financial report (**[F19]**)
      - Update maintenance tables (**[F22]**)
+       
 ### 4. **Science Observer**  
    - Responsible for **monitoring telescope operations and verifying observation data**.  
    - Has access to:  
      - Perform an embedded test (**[F21]**)
-   
+       
+### 5. **Developer**  
+   - Responsible for **maintaining and improving the system through software updates and testing**.  
+   - Has access to:  
+     - Support telescope control functionalities (**[F04]**)
+     - Assist in telescope automation (**[F06]**)
+     - Install, perform, update, and test new software packages (**[F23]**)
+       
+ ### 6. **Telescope Operator**  
+   - Responsible for **operating and managing the telescope, ensuring smooth functionality**.  
+   - Has access to:  
+     - Telescope control (**[F04]**)
+     - Manage queue-based scheduling (**[F07]**)
+     - Schedule and access planned downtimes (**[F08]**)
+     - Retrieve observational data (**[F09]**)
+     - Perform embedded tests to verify system performance (**[F21]**)
+       
+ ### 7. **Support Personnel**  
+   - Responsible for **maintaining system infrastructure and ensuring operational stability**.  
+   - Has access to:  
+     - Update maintenance tables (**[F22]**)
