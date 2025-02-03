@@ -41,5 +41,7 @@ The Gemini OCS system use case diagram defines different roles and their access 
      - Request for financial report (**[F19]**)
      - Update maintenance tables (**[F22]**)
 ### 4. **Science Observer**  
+   - Responsible for **monitoring telescope operations and verifying observation data**.  
+   - Has access to:  
      - Perform an embedded test
    
