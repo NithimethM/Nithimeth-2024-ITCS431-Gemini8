@@ -29,11 +29,14 @@ The Gemini OCS system use case diagram defines different roles and their access 
    - Has access to:
      - Create Science Plan (**[F10]**)
      - Simulate telescope behavior (**[F13]**)
-     - Data acquisition (**[F24]**)
-     - Access real-time data (**[F26]**)
-     - Receive real-time failure alerts, including Access to error categorization and error logs (**[F14,F15]**)
+     - Data acquisition, including access real-time data (**[F24,26]**)
      - Request historical reports on the telescope’s status (**[F17]**)
-     - Request financial report generation (**[F19]**)
-     - Monitor all relevant data (**[F25]**)
-     - Access reports (**[F18]**)
-     - Validate science plan (**[F11]**)
+  
+    
+### 3. **Administrator**
+   - Responsible for **system access management, security, and data integrity**.
+   - Has access to:
+     - Receive real-time failure alerts, including access to error categorization and logs (**[F14, F15]**)
+     - Request historical reports on the telescope’s status (**[F17]**)
+     - Request for financial report (**[F19]**)
+     - Update maintenance tables (**[F22]**)
