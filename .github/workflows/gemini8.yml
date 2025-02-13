@@ -1,9 +1,10 @@
 name: Java CI
 
 on:
-  push:
+  pull_request:
     branches:
       - master
+      - 6588008_Jakguy
 
 jobs:
   build:
@@ -26,3 +27,8 @@ jobs:
         cd Jakguy/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
+
+    - name: Run Main Class
+      run: |
+        cd Jakguy/HolidayTravelVehicles
+        java Main
