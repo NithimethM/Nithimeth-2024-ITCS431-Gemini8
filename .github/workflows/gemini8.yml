@@ -23,6 +23,6 @@ jobs:
 
     - name: Compile Java
       run: |
-        cd Jakguy/HolidayTravelVehicles 
+        cd 6588008_Jakguy/Jakguy/HolidayTravelVehicles 
         javac -d . *.java
       # Compile java file from directory
