@@ -1,47 +1,43 @@
 public class Customer {
 	
-	private int CustomerID = 0;
-	private String Fullname;
-	private String Address;
-	private String PhoneNumber;
+    private static int nextCustomerID = 1;  // Static variable for customer ID generation
+    private int customerID;
+    private String fullname;
+    private String address;
+    private String phoneNumber;
 	
-	public Customer(String Fullname, String Address, String Phonenum) {
-		this.setCustomerID(runningID++);
-		this.setFullname(Fullname);
-		this.setAddress(Address);
-		this.setPhoneNumber(Phonenum);
-	}
+    public Customer(String fullname, String address, String phoneNumber) {
+        this.customerID = nextCustomerID++;
+        this.setFullname(fullname);
+        this.setAddress(address);
+        this.setPhoneNumber(phoneNumber);
+    }
 
-	public int getCustomerID() {
-		return CustomerID;
-	}
+    public int getCustomerID() {
+        return customerID;
+    }
 
-	public void setCustomerID(int customerID) {
-		CustomerID = customerID;
-	}
+    public String getFullname() {
+        return fullname;
+    }
 
-	public String getFullname() {
-		return Fullname;
-	}
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
 
-	public void setFullname(String fullname) {
-		Fullname = fullname;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getAddress() {
-		return Address;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setAddress(String address) {
-		Address = address;
-	}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	public String getPhoneNumber() {
-		return PhoneNumber;
-	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		PhoneNumber = phoneNumber;
-	}
-	
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }
