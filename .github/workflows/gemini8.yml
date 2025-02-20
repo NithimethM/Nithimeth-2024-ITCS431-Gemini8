@@ -18,9 +18,7 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
         fetch-depth: 1  
 
-    - name: Debug Branch Name
-      run: echo "Current Branch: ${{ github.event.pull_request.head.ref }}"
-
+    
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:

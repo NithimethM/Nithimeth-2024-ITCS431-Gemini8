@@ -1,4 +1,4 @@
-package HolidayTravelVehicles;
+
 public class SalesPerson extends Person { 
 	private static int runID = 0;
     private int salespersonID;
