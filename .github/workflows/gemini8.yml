@@ -5,7 +5,7 @@ on:
     branches:
       - master
       - 6588008_Jakguy
-      - 6588029_Pathompum  # Both branches
+      - 6588029_Pathompum  
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         ref: ${{ github.event.pull_request.head.ref }}
-        fetch-depth: 1  # Fetch only the latest commit
+        fetch-depth: 1  
 
     - name: Debug Branch Name
       run: echo "Current Branch: ${{ github.event.pull_request.head.ref }}"
