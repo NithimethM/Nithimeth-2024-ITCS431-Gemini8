@@ -6,6 +6,7 @@ on:
       - master
       - 6588008_Jakguy
       - 6588029_Pathompum  
+      - 6588011_Terat
 
 jobs:
   build:
@@ -31,6 +32,8 @@ jobs:
           echo "WORK_DIR=Pathompum/HolidayTravelVehicles" >> $GITHUB_ENV
         elif [[ "${{ github.event.pull_request.head.ref }}" == "6588008_Jakguy" ]]; then
           echo "WORK_DIR=Jakguy/HolidayTravelVehicles" >> $GITHUB_ENV
+        elif [[ "${{ github.event.pull_request.head.ref }}" == "6588011_Terat" ]]; then
+          echo "WORK_DIR=Terat/HolidayTravelVehicles" >> $GITHUB_ENV
         else
           echo "Unknown branch: Cannot determine correct directory."
           exit 1
