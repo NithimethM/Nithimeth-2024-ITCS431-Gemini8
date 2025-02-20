@@ -8,6 +8,7 @@ on:
       - 6588029_Pathompum  
       - 6588011_Terat
       - 6588180_Nithimeth
+      - 6588047_Patsawat
 
 jobs:
   build:
@@ -37,6 +38,8 @@ jobs:
           echo "WORK_DIR=Terat/HolidayTravelVehicles" >> $GITHUB_ENV
         elif [[ "${{ github.event.pull_request.head.ref }}" == "6588180_Nithimeth" ]]; then
           echo "WORK_DIR=Nithimeth/HolidayTravelVehicles" >> $GITHUB_ENV
+        elif [[ "${{ github.event.pull_request.head.ref }}" == "6588047_Patsawat" ]]; then
+          echo "WORK_DIR=Patsawat/HolidayTravelVehicles" >> $GITHUB_ENV
         else
           echo "Unknown branch: Cannot determine correct directory."
           exit 1
