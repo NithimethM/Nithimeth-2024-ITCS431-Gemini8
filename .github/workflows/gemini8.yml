@@ -1,0 +1,50 @@
+name: Java CI
+
+on:
+  pull_request:
+    branches:
+      - master
+      - 6588008_Jakguy
+      - 6588029_Pathompum  
+      - 6588011_Terat
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+        fetch-depth: 1  
+
+    
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11'  # Change if needed
+
+    - name: Determine Working Directory
+      id: set-dir
+      run: |
+        if [[ "${{ github.event.pull_request.head.ref }}" == "6588029_Pathompum" ]]; then
+          echo "WORK_DIR=Pathompum/HolidayTravelVehicles" >> $GITHUB_ENV
+        elif [[ "${{ github.event.pull_request.head.ref }}" == "6588008_Jakguy" ]]; then
+          echo "WORK_DIR=Jakguy/HolidayTravelVehicles" >> $GITHUB_ENV
+        elif [[ "${{ github.event.pull_request.head.ref }}" == "6588011_Terat" ]]; then
+          echo "WORK_DIR=Terat/HolidayTravelVehicles" >> $GITHUB_ENV
+        else
+          echo "Unknown branch: Cannot determine correct directory."
+          exit 1
+        fi
+
+    - name: Compile Java
+      run: |
+        cd $WORK_DIR
+        javac -d . *.java
+
+    - name: Run Main Class
+      run: |
+        cd $WORK_DIR
+        java Main
