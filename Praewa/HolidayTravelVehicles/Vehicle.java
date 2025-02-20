@@ -45,7 +45,9 @@ public class Vehicle {
         return manufacturer;
     }
 
-    public void setManufacturer(String manufacturer)
+    public void setManufacturer(String manufacturer){
+        this.manufacturer = manufacturer;
+    }
     public void displayVehicleInfo() {
         System.out.println("Vehicle Details:");
         System.out.println("Name: " + name);
