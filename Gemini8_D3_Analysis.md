@@ -9,8 +9,8 @@
 From the final use case diagram, we have selected the following 5 use cases:
 
 1. **Create Science Plan**
-2. **Validate Science Plan**
-3. **Test Science Plan**
+2. **Test Science Plan**
+3. **Validate Science Plan**
 4. **Create Observing Program**
 5. **Validate Observing Program**
 
@@ -241,12 +241,166 @@ From the final use case diagram, we have selected the following 5 use cases:
   </tr>
 </table>
 
+---
+
+### Use Case Description: Create an Observing Program
+<table>
+  <tr>
+    <td><strong>Use Case name:</strong> Create an Observing Program</td>
+    <td><strong>ID: 4</strong></td>
+    <td><strong>Importance Level:</strong> High</td>
+  </tr>
+  <tr>
+    <td colspan="2">Primary Actor: Telescope Operator</td>
+    <td>Use Case Type: Program Creation</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+        <strong>Stakeholders and Interests</strong>
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li><strong>Telescope Operator</strong> – Wants to create an observing program to execute a science plan.</li>
+            <li><strong>Astronomer</strong> – Ensures that the created observing program aligns with the science objectives.</li>
+            <li><strong>Science Observer</strong> – Needs to understand how the observing program relates to overall observations.</li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Brief Description</strong><br>This use case describes how a telescope operator creates an observing program based on validated science plans and prepares for execution.</td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Trigger</strong><br>The telescope operator wants to create an observing program.</td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Type</strong><br>Internal</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+        <strong>Relationships</strong><br>
+        <strong>Association:</strong> Telescope Operator<br>
+        <strong>Include:</strong> Validate Science Plan<br>
+        <strong>Extend:</strong> None<br>
+        <strong>Generalization:</strong> None
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Normal Flow of Events</strong><br>
+        <ol style="padding-left: 40px;">
+            <li>The telescope operator accesses the Observing Program Creation Module.</li>
+            <li>The telescope operator selects a validated science plan to base the observing program on.</li>
+            <li>The telescope operator enters relevant details, such as the start time, duration, and observational parameters.</li>
+            <li>The system verifies the provided information.</li>
+            <li>If valid, the telescope operator submits the observing program.</li>
+            <li>The system stores the observing program and notifies the telescope operator of success.</li>
+        </ol>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Subflows</strong><br>
+        <strong>None</strong>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Alternate / Exceptional Flow</strong><br>
+        <strong>4, a:</strong> If any required information is missing or incorrect, the system prompts the telescope operator to correct it before submission.
+    </td>
+  </tr>
+</table>
+
+---
+
+### Use Case Description: Validate an Observing Program
+<table>
+  <tr>
+    <td><strong>Use Case name:</strong> Validate an Observing Program</td>
+    <td><strong>ID: 5</strong></td>
+    <td><strong>Importance Level:</strong> High</td>
+  </tr>
+  <tr>
+    <td colspan="2">Primary Actor: Telescope Operator</td>
+    <td>Use Case Type: Validation</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+        <strong>Stakeholders and Interests</strong>
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li><strong>Telescope Operator</strong> – Ensures that the observing program meets the required standards.</li>
+            <li><strong>Astronomers</strong> – Rely on validated observing programs for accurate scientific observations.</li>
+            <li><strong>Science Observers</strong> – Need validated programs to ensure reliable data collection.</li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Brief Description</strong><br>This use case describes the process of the Telescope Operator reviewing and validating an observing program to ensure it meets operational and scientific requirements before execution.</td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Trigger</strong><br>A new observing program is submitted for validation.</td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Type</strong><br>Internal</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+        <strong>Relationships</strong><br>
+        <strong>Association:</strong> Telescope Operator<br>
+        <strong>Include:</strong> None<br>
+        <strong>Extend:</strong> None<br>
+        <strong>Generalization:</strong> None
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Normal Flow of Events</strong><br>
+        <ol style="padding-left: 40px;">
+            <li>The telescope operator accesses the system.</li>
+            <li>The system retrieves the observing program details.</li>
+            <li>The telescope operator selects an observing program for validation.</li>
+            <li>The telescope operator reviews the program for completeness and accuracy.</li>
+            <li>If changes are required:</li>
+            <ul>
+                <li>The <strong>S-1: Request for Modifications</strong> subflow is performed.</li>
+            </ul>
+            <li>If additional expertise is needed:</li>
+            <ul>
+                <li>The <strong>S-2: Additional Review</strong> subflow is performed.</li>
+            </ul>
+            <li>If the program meets all validation criteria, the telescope operator approves it.</li>
+            <li>The system marks the program as validated and updates the status.</li>
+            <li>The science observer is notified of the validation result.</li>
+        </ol>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Subflows</strong><br>
+        <strong>S-1: Request for Modifications</strong>
+        <ol style="padding-left: 40px;">
+            <li>The system prompts the telescope operator with request modification.</li>
+            <li>The system sends the program back to the science observer with feedback.</li>
+        </ol>
+        <strong>S-2: Additional Review</strong>
+        <ol style="padding-left: 40px;">
+            <li>If required, the telescope operator can forward the program to another expert for further review.</li>
+            <li>The reviewer provides feedback or confirms validation.</li>
+        </ol>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3"><strong>Alternate / Exceptional Flow</strong><br>
+        <strong>3, a1:</strong> If the observing program does not meet the required criteria, the system rejects it, and the submitter is notified to revise and resubmit.
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## Activity Diagrams
 
+📌 **Click the image** to view it in the repository.  
+🔗 **Or access the diagram here:** [Click here]() 
 
+[![Activity Diagram 1](images/D3-A1.png)](images/D3-A1.png) 
+[![Activity Diagram 2](images/D3-A2.png)](images/D3-A2.png) 
+[![Activity Diagram 3](images/D3-A3.png)](images/D3-A3.png) 
+[![Activity Diagram 4](images/D3-A4.png)](images/D3-A4.png) 
+[![Activity Diagram 5](images/D3-A5.png)](images/D3-A5.png) 
 
 ---
 
@@ -257,4 +411,4 @@ From the final use case diagram, we have selected the following 5 use cases:
 
 ## Class Diagram
 
-![Class Diagram](diagrams/class_diagram.png)
+![Class Diagram](images/class_diagram.png)
