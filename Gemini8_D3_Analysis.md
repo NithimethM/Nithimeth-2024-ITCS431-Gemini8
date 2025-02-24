@@ -436,7 +436,7 @@ From the final use case diagram, we have selected the following 5 use cases:
 ## Activity Diagrams
 
 📌 **Click the image** to view it in the repository.  
-🔗 **Or access the diagram here:** [Click here]() 
+🔗 **Or access the diagram here:** [Click here](https://drive.google.com/file/d/1FpJH2Q4TsuX51-rKuYj1fElyLXoxhbei/view?usp=sharing) 
 
 [![Activity Diagram 1](images/D3-A1.png)](images/D3-A1.png) 
 [![Activity Diagram 2](images/D3-A2.png)](images/D3-A2.png) 
@@ -449,7 +449,7 @@ From the final use case diagram, we have selected the following 5 use cases:
 ## Sequence Diagrams
 
 📌 **Click the image** to view it in the repository.  
-🔗 **Or access the diagram here:** [Click here]() 
+🔗 **Or access the diagram here:** [Click here](https://drive.google.com/file/d/1FpJH2Q4TsuX51-rKuYj1fElyLXoxhbei/view?usp=sharing) 
 [![Sequence Diagram 1](images/D3-S1.drawio.png)](images/D3-S1.drawio.png) 
 [![Sequence Diagram 2](images/D3-S2.drawio.png)](images/D3-S2.drawio.png) 
 [![Sequence Diagram 3](images/D3-S3.drawio.png)](images/D3-S3.drawio.png) 
@@ -462,6 +462,6 @@ From the final use case diagram, we have selected the following 5 use cases:
 ## Class Diagram
 
 📌 **Click the image** to view it in the repository.  
-🔗 **Or access the diagram here:** [Click here]() 
-[![Class Diagram](images/D3-Class.drawio.png)](images/D3-Class.drawio.png)
+🔗 **Or access the diagram here:** [Click here](https://drive.google.com/file/d/1FpJH2Q4TsuX51-rKuYj1fElyLXoxhbei/view?usp=sharing) 
+[![Class Diagram](images/D3-Class.drawio.svg)](images/D3-Class.drawio.png)
 
