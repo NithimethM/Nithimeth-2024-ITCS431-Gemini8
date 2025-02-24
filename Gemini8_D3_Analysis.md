@@ -415,5 +415,5 @@ From the final use case diagram, we have selected the following 5 use cases:
 ---
 
 ## Class Diagram
+[![Class Diagram(images/D3-Class.drawio.png)](images/D3-Class.drawio.png)
 
-![Class Diagram](images/class_diagram.png)
