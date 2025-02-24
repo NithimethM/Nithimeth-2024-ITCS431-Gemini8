@@ -405,11 +405,11 @@ From the final use case diagram, we have selected the following 5 use cases:
 ---
 
 ## Sequence Diagrams
-![image](https://github.com/user-attachments/assets/c9e13a6e-fce6-4568-8c58-accc1b415928)
-![image](https://github.com/user-attachments/assets/a7003404-0107-4cfa-b684-ad32fa5af309)
-![image](https://github.com/user-attachments/assets/f8fab11d-a43a-4248-9b9c-1ff23b7ffa1c)
-![image](https://github.com/user-attachments/assets/1ca3c7bc-3fc2-4c0b-a0c4-94f5423e4883)
-![image](https://github.com/user-attachments/assets/bf83a260-e615-458f-a576-47cbc9a9245b)
+[![Sequence Diagram 1](images/D3-S1.drawio.png)](images/D3-S1.drawio.png) 
+[![Sequence Diagram 2](images/D3-S2.drawio.png)](images/D3-S2.drawio.png) 
+[![Sequence Diagram 3](images/D3-S3.drawio.png)](images/D3-S3.drawio.png) 
+[![Sequence Diagram 4](images/D3-S4.drawio.png)](images/D3-S4.drawio.png)
+[![Sequence Diagram 5](images/D3-S5.drawio.png)](images/D3-S5.drawio.png)
 
 
 ---
