@@ -14,6 +14,8 @@ From the final use case diagram, we have selected the following 5 use cases:
 4. **Create Observing Program**
 5. **Validate Observing Program**
 
+🔗 **Access the doc version here:** [Click here](https://docs.google.com/document/d/12EcK--yKIIMsJC57zrawP9R-AoOYYruRPwdzsgmrf0Y/edit?usp=sharing) 
+
 --- 
 ## Use Case Descriptions: Create Science Plan
 
