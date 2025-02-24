@@ -82,16 +82,24 @@ From the final use case diagram, we have selected the following 5 use cases:
 </tr>
 <tr>
     <td colspan="3"><strong>Alternate / Exceptional Flow</strong><br>
-        <strong>4, a:</strong> If the Science plan creation module detects unusual or invalid inputs, it performs an alternate flow:
-        <ol style="padding-left: 60px;">
-            <li>The Science plan creation module displays a warning message specifying the detected issue(s).</li>
-            <li>The astronomer is given two options:</li>
-            <ul>
-                <li><strong>Option 1:</strong> Modify Inputs – The astronomer is redirected to the input fields for correction.</li>
-                <li><strong>Option 2:</strong> Proceed Anyway – The system tags the science plan with a warning and proceeds.</li>
-            </ul>
+    <strong>4, a:</strong> If the Science Plan Creation module detects unusual or invalid inputs, it performs an alternate flow: <br/>
+    <strong>4, a1:</strong> The Science plan creation module displays a warning message specifying the detected issue(s). <br/>
+    <strong>4, a2:</strong> The astronomer is given two options: <br/>
+    <ol style="">
+        <ol><strong>Option 1:</strong> Modify Inputs  
+              <ol style="padding-left: 30px;">
+                        4, a3.1: The astronomer is redirected to the input fields for correction.
+              </ol>
         </ol>
-    </td>
+        <ol><strong>Option 2:</strong> Proceed Anyway  
+              <ol style="padding-left: 30px;">
+                        4, a3.2:The system tags the science plan with a warning and proceeds.
+              </ol>
+        </ol>
+    </ol>
+    
+</td>
+
 </tr>
 </table>
 
@@ -204,23 +212,36 @@ From the final use case diagram, we have selected the following 5 use cases:
   </tr>
   <tr>
     <td colspan="3"><strong>Normal Flow of Events</strong><br>
-        <ol style="padding-left: 40px;">
-            <li>The science observer navigates to the Science Plan Validation Module.</li>
-            <li>The science observer selects a submitted science plan for validation.</li>
-            <li>The system retrieves plans and displays relevant details.</li>
-            <li>The observer selects a plan.</li>
-            <li>If the plan is “validated”, “Pending Revision”, or “Rejected”, the system displays plan details and ends the process.</li>
-            <li>If the plan status is “not validated”, the observer reviews the plan for completeness, feasibility, and adherence to guidelines.</li>
-            <li>If changes are required:</li>
+    <ol style="padding-left: 40px;">
+        <li>The science observer navigates to the Science Plan Validation Module.</li>
+        <li>The science observer selects a submitted science plan for validation.</li>
+        <li>The system retrieves plans and displays relevant details.</li>
+        <li>
+            The observer selects a plan.
+            <ol >
+                a. If the plan is “Validated”, “Pending Revision”, or “Rejected”, the system displays plan details and ends the process. <br/>
+                b. If the plan status is “Not Validated”, pass <br/>
+            </ol>
+        </li>
+        <li>
+        the observer reviews the plan for completeness, feasibility, and adherence to guidelines.
+        </li>
+        <li>
+            If changes are required:
             <ul>
                 <li>The <strong>S-1: Request Modifications</strong> subflow is performed.</li>
             </ul>
-            <li>The science observer approves or rejects the plan.</li>
-            <li>If the plan is approved, its status updates to "Validated".</li>
-            <li>If the plan is rejected, its status updates to "Rejected".</li>
-            <li>The system updates the status of the science plan.</li>
-        </ol>
-    </td>
+        </li>
+        <li>The science observer approves or rejects the plan.
+          <ol >
+                a. If the plan is approved, its status updates to "Validated". <br/>
+                b. If the plan is rejected, its status updates to "Rejected".<br/>
+            </ol>
+        </li>
+        <li>The system updates the status of the science plan.</li>
+    </ol>
+</td>
+
   </tr>
   <tr>
     <td colspan="3"><strong>Subflows</strong><br>
@@ -251,24 +272,25 @@ From the final use case diagram, we have selected the following 5 use cases:
     <td><strong>Importance Level:</strong> High</td>
   </tr>
   <tr>
-    <td colspan="2">Primary Actor: Telescope Operator</td>
-    <td>Use Case Type: Program Creation</td>
+    <td colspan="2">Primary Actor: Science Observer</td>
+    <td>Use Case Type: Creation</td>
   </tr>
   <tr>
     <td colspan="3">
         <strong>Stakeholders and Interests</strong>
         <ul style="list-style-type: none; padding-left: 20px;">
-            <li><strong>Telescope Operator</strong> – Wants to create an observing program to execute a science plan.</li>
-            <li><strong>Astronomer</strong> – Ensures that the created observing program aligns with the science objectives.</li>
-            <li><strong>Science Observer</strong> – Needs to understand how the observing program relates to overall observations.</li>
+            <li><strong>Science Observer</strong> – Wants to create an observing program to manage and schedule observations.</li>
+            <li><strong>Astronomer</strong> – Utilizes the observing program to align science goals with telescope operations.</li>
+            <li><strong>Telescope Operator</strong> – Ensures the observing program is feasible and aligns with telescope capabilities.</li>
+            <li><strong>Administrator</strong> – Manages permissions and access to observing programs.</li>
         </ul>
     </td>
   </tr>
   <tr>
-    <td colspan="3"><strong>Brief Description</strong><br>This use case describes how a telescope operator creates an observing program based on validated science plans and prepares for execution.</td>
+    <td colspan="3"><strong>Brief Description</strong><br>This use case describes the process of creating an observing program, which defines the structure, schedule, and objectives for telescope observations.</td>
   </tr>
   <tr>
-    <td colspan="3"><strong>Trigger</strong><br>The telescope operator wants to create an observing program.</td>
+    <td colspan="3"><strong>Trigger</strong><br>The Science Observer initiates the process to create an observing program for telescope observations.</td>
   </tr>
   <tr>
     <td colspan="3"><strong>Type</strong><br>Internal</td>
@@ -276,8 +298,8 @@ From the final use case diagram, we have selected the following 5 use cases:
   <tr>
     <td colspan="3">
         <strong>Relationships</strong><br>
-        <strong>Association:</strong> Telescope Operator<br>
-        <strong>Include:</strong> Validate Science Plan<br>
+        <strong>Association:</strong> Science Observer<br>
+        <strong>Include:</strong> None<br>
         <strong>Extend:</strong> None<br>
         <strong>Generalization:</strong> None
     </td>
@@ -285,23 +307,41 @@ From the final use case diagram, we have selected the following 5 use cases:
   <tr>
     <td colspan="3"><strong>Normal Flow of Events</strong><br>
         <ol style="padding-left: 40px;">
-            <li>The telescope operator accesses the Observing Program Creation Module.</li>
-            <li>The telescope operator selects a validated science plan to base the observing program on.</li>
-            <li>The telescope operator enters relevant details, such as the start time, duration, and observational parameters.</li>
-            <li>The system verifies the provided information.</li>
-            <li>If valid, the telescope operator submits the observing program.</li>
-            <li>The system stores the observing program and notifies the telescope operator of success.</li>
+            <li>The science observer navigates to the Observing Program Creation Module.</li>
+            <li>The science observer selects an approved Science Plan.</li>
+            <li>The system performs a Preliminary Feasibility Check to ensure the observation is possible.
+            <ol >
+                a. If the feasibility check fails, the system suggests modifications and alternative options. The process ends if the user does not accept an alternative. <br/>
+                b. If the feasibility check passes, the system automatically creates an Observing Program template based on the Science Plan. <br/>
+            </ol>
+            </li>
+            <li>The system automatically assigns a priority score and suggests optimal scheduling slots.</li>
+            <li>The science observer enters observation details, including targets, time windows, instrument settings, and constraints.</li>
+            <li>The system performs input validation to check for missing or incorrect information.
+            <ol >
+                a. If the validation fails, the S-1: Unusual Input Warning subflow is performed. <br/>
+                b. If all inputs are valid, the science observer saves the observing program. <br/>
+            </ol>
+            </li>
+            <li>The system confirms that the observing program has been successfully created.</li>
+            <li>The process ends, waiting for further validation by telescope operators.</li>
         </ol>
     </td>
   </tr>
   <tr>
     <td colspan="3"><strong>Subflows</strong><br>
-        <strong>None</strong>
+        <strong>S-1: Unusual Input Warning</strong><br>
+        The system detects missing or unusual inputs in the observing program. The system displays a warning message specifying the issue(s). The science observer has two options:
+        <ul style="list-style-type: none; padding-left: 20px;">
+            <li><strong>Modify Inputs:</strong> The user corrects the input errors and revalidates.</li>
+            <li><strong>Proceed Anyway:</strong> The system tags the observing program with a warning but allows saving (only if there are no critical errors).</li>
+        </ul>
     </td>
   </tr>
   <tr>
     <td colspan="3"><strong>Alternate / Exceptional Flow</strong><br>
-        <strong>4, a:</strong> If any required information is missing or incorrect, the system prompts the telescope operator to correct it before submission.
+        <strong>3, a:</strong> The observing program cannot be created because the target is not visible, the instrument is unavailable, or the telescope is under maintenance. The system provides alternative suggestions. If the science observer accepts an alternative, the process continues. If the science observer rejects all alternatives, the process ends.<br>
+        <strong>6, a:</strong> The observing program contains critical errors that prevent validation. The system blocks submission until corrections are made.
     </td>
   </tr>
 </table>
@@ -405,6 +445,9 @@ From the final use case diagram, we have selected the following 5 use cases:
 ---
 
 ## Sequence Diagrams
+
+📌 **Click the image** to view it in the repository.  
+🔗 **Or access the diagram here:** [Click here]() 
 [![Sequence Diagram 1](images/D3-S1.drawio.png)](images/D3-S1.drawio.png) 
 [![Sequence Diagram 2](images/D3-S2.drawio.png)](images/D3-S2.drawio.png) 
 [![Sequence Diagram 3](images/D3-S3.drawio.png)](images/D3-S3.drawio.png) 
@@ -415,5 +458,8 @@ From the final use case diagram, we have selected the following 5 use cases:
 ---
 
 ## Class Diagram
-[![Class Diagram(images/D3-Class.drawio.png)](images/D3-Class.drawio.png)
+
+📌 **Click the image** to view it in the repository.  
+🔗 **Or access the diagram here:** [Click here]() 
+[![Class Diagram](images/D3-Class.drawio.png)](images/D3-Class.drawio.png)
 
